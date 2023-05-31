@@ -1,0 +1,146 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.3rem;
+}
+
+.bodyPage {
+  min-width: 1024px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  margin-top: 100px;
+  margin-bottom: 40px;
+}
+
+.profileImg {
+  background-image: url("/img/profile-pic.jpg");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 250px;
+  width: 250px;
+  margin-bottom: 50px;
+  border-radius: 50%;
+  margin-top: 70px;
+}
+
+.background {
+  width: 100%;
+  height: 750px;
+  background-color: #6e07f3;
+  position: relative;
+}
+
+.presentacion {
+  color: white;
+  font-size: xx-large;
+  width: 500px;
+  height: 400px;
+  position: relative;
+  top: 100px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.textoPresentacion {
+  font-size: 1.4rem;
+  margin-top: 20px;
+}
+
+.tecnologias {
+  background-color: white;
+  width: 90%;
+  height: 800px;
+  border: 2px solid #7788999c;
+  border-radius: 20px;
+  margin: 0 auto;
+  position: relative;
+  top: -150px;
+  display: flex;
+}
+
+.tarjetaTec1 {
+  width: 33%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 40px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.tarjetaTec2 {
+  border-right: 2px solid #7788999c;
+  border-left: 2px solid #7788999c;
+  width: 33%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 40px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.front {
+  width: 100px;
+  height: 100px;
+}
+
+.tecnologias h2 {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.tecnologias p {
+  text-align: center;
+}
+
+.tecnologias span {
+  margin-top: 30px;
+  font-size: larger;
+}
+
+ul {
+  margin-top: 20px;
+}
+
+li {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.pokedext {
+  background-image: url("./img/pokedex.jpeg");
+}
+.automotora {
+  background-image: url("./img/audi.jpg");
+}
+
+.reproductor {
+  background-image: url("./img/pokedex.jpeg");
+}
+
+.galeriaProyectos {
+  display: flex;
+  height: 300px;
+  gap: 20px;
+}
+
+.galeriaProyectos > div {
+  flex: 1;
+  border-radius: 20px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  transition: all 0.8s cubic-bezier(0.25, 0.4, 0.45, 1.4);
+}
+
+.galeriaProyectos > div:hover {
+  flex: 5;
+}
