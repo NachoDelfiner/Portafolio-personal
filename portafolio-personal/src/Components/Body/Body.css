@@ -108,6 +108,8 @@ body {
 
 ul {
   margin-top: 20px;
+  list-style: none;
+  padding-left: 0;
 }
 
 li {
@@ -116,20 +118,23 @@ li {
 }
 
 .pokedext {
-  background-image: url("./img/pokedex.jpeg");
+  background-image: url("./img/pokedex2.png");
 }
 .automotora {
-  background-image: url("./img/audi.jpg");
+  background-image: url("./img/autoVip.png");
 }
 
 .reproductor {
-  background-image: url("./img/pokedex.jpeg");
+  background-image: url("./img/audn.png");
 }
 
 .galeriaProyectos {
   display: flex;
   height: 300px;
-  gap: 20px;
+  width: 90%;
+  gap: 10px;
+  margin: 0 auto;
+  margin-bottom: 50px;
 }
 
 .galeriaProyectos > div {
@@ -139,8 +144,131 @@ li {
   background-repeat: no-repeat;
   background-size: auto 100%;
   transition: all 0.8s cubic-bezier(0.25, 0.4, 0.45, 1.4);
+  cursor: pointer;
 }
 
 .galeriaProyectos > div:hover {
   flex: 5;
+}
+
+.proyectos {
+  text-align: center;
+}
+
+.proyectos h2 {
+  margin-bottom: 20px;
+}
+
+.proyectos p {
+  margin-bottom: 50px;
+}
+
+.testimonios {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 200px;
+  margin-bottom: 50px;
+}
+
+.testimonios p {
+  text-align: center;
+}
+
+.imgTestimonios img {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+}
+
+.hagamoslo {
+  margin: 0 auto;
+  position: relative;
+  top: 100px;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #141c3a;
+  box-shadow: 0 5px 5px 0 rgb(0 0 0 / 20%), 0 0 0 1px #141c3a;
+  color: white;
+  height: 200px;
+  width: 90%;
+  border-radius: 25px;
+}
+
+.btnHagamoslo {
+  background-color: #141c3a;
+  border: 2px solid #5be9b9;
+  color: white;
+  cursor: pointer;
+  font-size: 1.2rem;
+  border-radius: 25px;
+  padding: 10px 20px;
+}
+
+.btnHagamoslo:hover {
+  background-color: #5be9b9;
+  color: #141c3a;
+}
+
+.logotype2 {
+  height: 200px;
+  width: 200px;
+  margin-top: 150px;
+  cursor: pointer;
+}
+
+.background2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  color: white;
+  width: 100%;
+  padding-bottom: 100px;
+  background-color: #6e07f3;
+  text-align: center;
+}
+
+.background2 p {
+  opacity: 90%;
+}
+
+.redes {
+  display: flex;
+  gap: 20px;
+}
+
+.redSocial {
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.linkedin {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.gitHub {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.mail {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  cursor: pointer;
 }

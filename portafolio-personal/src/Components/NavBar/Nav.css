@@ -32,9 +32,22 @@
 .btn2 {
   border: 2px solid #6e07f3;
   height: 40px;
-  width: 100px;
+  width: 115px;
   border-radius: 30px;
-  color: #6e07f3;
   font-size: 1rem;
   cursor: pointer;
+}
+
+.btnHover {
+  color: #6e07f3;
+}
+
+.btnHover:hover {
+  background-color: #6e07f3;
+  color: white;
+}
+
+a {
+  text-decoration: none;
+  color: black;
 }

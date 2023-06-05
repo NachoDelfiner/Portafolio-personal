@@ -1,6 +1,9 @@
 import React from "react";
 import { Nav } from "../NavBar/Nav";
 import "../Body/Body.css";
+import linkedin from "../../icons/linkedin.svg";
+import github from "../../icons/github.svg";
+import mail from "../../icons/mail.svg";
 
 export const Body = () => {
   return (
@@ -16,7 +19,7 @@ export const Body = () => {
           </div>
         </header>
         <main>
-          <div className="background">
+          <div id="background1" className="background">
             <div className="presentacion">
               <p>Hola soy Ignacio, me dicen Nacho. Encantado de conocerte.</p>
               <p className="textoPresentacion">
@@ -36,7 +39,7 @@ export const Body = () => {
 
           {/* Stack de tecnologias */}
 
-          <div className="tecnologias">
+          <div id="tecnologias" className="tecnologias">
             <div className="tarjetaTec1">
               <img
                 className="front"
@@ -54,7 +57,7 @@ export const Body = () => {
               <ul>
                 <li className="html">HTML 5</li>
                 <li className="css">CSS 3</li>
-                <li className="javascript">Java Script</li>
+                <li className="javascript">JavaScript</li>
                 <li className="react">React</li>
               </ul>
               <span>Herramientas</span>
@@ -94,7 +97,8 @@ export const Body = () => {
               <h2>Back-End</h2>
               <p>
                 Es crucial en las páginas web, gestionar datos, lógicas y
-                asegurar interacciones fluidas entre usuarios y servidores.
+                asegurar interacciones fluidas entre usuarios y servidores
+                siempre que sea necesario.
               </p>
               <span>
                 <strong>Tecnologias</strong>
@@ -110,13 +114,79 @@ export const Body = () => {
               </ul>
             </div>
           </div>
-          {/* Proyectos */}
+          <div id="proyectos" className="proyectos">
+            <h2>Trabajos recientes</h2>
+            <p>Aquí hay algunos proyectos en los que he trabajado</p>
+          </div>
           <div className="galeriaProyectos">
             <div className="pokedext"></div>
             <div className="automotora"></div>
             <div className="reproductor"></div>
           </div>
+          <div className="testimonios">
+            <h3>Testimonios</h3>
+            <span>Algunas personas con las que he trabajado</span>
+            <div className="imgTestimonios">
+              <img src="./img/perfil-Fran.png" alt="" />
+            </div>
+            <p>
+              "Quedé contento con el entusiasmo que él dió en el bootcamp.
+              <br />
+              ¡Con su pasión y entrega, superó obstáculos y demostró habilidades
+              excepcionales!"
+            </p>
+            <h4>Francisco Recalde</h4>
+            <span>Profesor - Bootcamp Full Stack Web Developer</span>
+          </div>
         </main>
+        <footer>
+          <div id="hagamoslo" className="hagamoslo">
+            <h2>Iniciar un proyecto</h2>
+            <p>
+              ¿Interesad@ en trabajar juntos? <br /> Deberiamos agendar una
+              reunion. <br /> Yo invito el cafe.
+            </p>
+            <button className="btnHagamoslo">🤘🏻 Hagámoslo</button>
+          </div>
+          <div className="background2">
+            <a href="#nav">
+              <img
+                className="logotype2"
+                src="./img/logotipo2.png"
+                alt="Logo personal"
+              />
+            </a>
+
+            <p>
+              Viviendo, aprendiendo y subiendo de nivel <br /> un día a la vez.
+            </p>
+            <div className="redes">
+              <div className="redSocial">
+                <a
+                  href="https://www.linkedin.com/in/ignacio-delfiner/"
+                  target="_blank"
+                >
+                  <img
+                    className="linkedin"
+                    src={linkedin}
+                    alt="Icono de Likedin"
+                  />
+                </a>
+              </div>
+              <div className="redSocial">
+                <a href="https://github.com/NachoDelfiner" target="_blank">
+                  <img className="gitHub" src={github} alt="Logo de GitHub" />
+                </a>
+              </div>
+              <div className="redSocial">
+                <a href="mailto:delfinerignacio@gmail.com" target="_blank">
+                  <img className="mail" src={mail} alt="Logo de Mail" />
+                </a>
+              </div>
+            </div>
+            <p>Hecho a mano por mi ✌🏻</p>
+          </div>
+        </footer>
       </div>
     </>
   );
