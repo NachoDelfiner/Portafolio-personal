@@ -14,11 +14,11 @@ export const Body = () => {
           <h1 className="title">Desarrollador Web Full Stack</h1>
           <p>Desarrollo paginas web, amo lo que hago</p>
           <div className="profileImg"></div>
-          <div>
+          <div className="stup">
             <img src="./img/stup.png" alt="imagen decorativa de un Stup" />
           </div>
         </header>
-        <main>
+        <main className="main">
           <div id="background1" className="background">
             <div className="presentacion">
               <p>Hola soy Ignacio, me dicen Nacho. Encantado de conocerte.</p>
