@@ -36,9 +36,6 @@ export const Body = () => {
               </p>
             </div>
           </div>
-
-          {/* Stack de tecnologias */}
-
           <div id="tecnologias" className="tecnologias">
             <div className="tarjetaTec1">
               <img
