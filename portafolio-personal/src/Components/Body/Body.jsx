@@ -62,6 +62,7 @@ export const Body = () => {
                 <li>Git</li>
                 <li>GitHub</li>
                 <li>Bootstrap</li>
+                <li>Netlify</li>
               </ul>
             </div>
             <div className="tarjetaTec2">
@@ -116,9 +117,21 @@ export const Body = () => {
             <p>Aquí hay algunos proyectos en los que he trabajado</p>
           </div>
           <div className="galeriaProyectos">
-            <div className="pokedext"></div>
-            <div className="automotora"></div>
-            <div className="reproductor"></div>
+            <div className="pokedext">
+              <a href="https://pokedex-proyecto.netlify.app/" target="_blank">
+                <img src="./img/pokedex2.png" alt="Portada Pokedex" />
+              </a>
+            </div>
+            <div className="automotora">
+              <a href="https://autovip-proyecto.netlify.app/" target="_blank">
+                <img src="./img/autoVip.png" alt="Portada AUTOVIP" />
+              </a>
+            </div>
+            <div className="reproductor">
+              <a href="https://pokedex-proyecto.netlify.app/" target="_blank">
+                <img src="./img/audn.png" alt="Portada audn" />
+              </a>
+            </div>
           </div>
           <div className="testimonios">
             <h3>Testimonios</h3>

@@ -117,7 +117,7 @@ li {
   margin-bottom: 10px;
 }
 
-.pokedext {
+/* .pokedext {
   background-image: url("./img/pokedex2.png");
 }
 .automotora {
@@ -149,7 +149,45 @@ li {
 
 .galeriaProyectos > div:hover {
   flex: 5;
+} */
+
+/* ////////////////////////////// */
+
+.galeriaProyectos {
+  display: flex;
+  height: 300px;
+  width: 90%;
+  gap: 10px;
+  margin: 0 auto;
+  margin-bottom: 50px;
 }
+
+.galeriaProyectos > div {
+  flex: 1;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: flex 0.8s cubic-bezier(0.25, 0.4, 0.45, 1.4),
+    width 0.8s cubic-bezier(0.25, 0.4, 0.45, 1.4);
+  cursor: pointer;
+}
+
+.galeriaProyectos > div > a > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s cubic-bezier(0.25, 0.4, 0.45, 1.4);
+}
+
+.galeriaProyectos > div:hover {
+  flex: 5;
+  width: 100%;
+}
+
+.galeriaProyectos > div:hover > img {
+  transform: scale(1.2);
+}
+
+/* ////////////////////////////// */
 
 .proyectos {
   text-align: center;
