@@ -130,7 +130,7 @@ export const Body = () => {
               </a>
             </div>
             <div className="reproductor">
-              <a href="https://pokedex-proyecto.netlify.app/" target="_blank">
+              <a href="#" target="_blank">
                 <img src="./img/audn.png" alt="Portada audn" />
               </a>
             </div>
