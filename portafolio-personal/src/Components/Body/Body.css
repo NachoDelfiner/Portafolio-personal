@@ -289,7 +289,6 @@ li {
     width: 90%;
     display: flex;
     flex-direction: column;
-    align-items: center;
   }
 
   .title {
@@ -325,13 +324,13 @@ li {
 
   .background {
     width: 100%;
+    height: 1000px;
   }
 
   .main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 5px solid black;
     width: 100%;
   }
 
@@ -342,12 +341,12 @@ li {
     text-align: center;
   }
 
-  .presentacion p {
-    font-size: 2.5rem;
+  .introPresentacion {
+    font-size: 3.5rem;
   }
 
   .textoPresentacion {
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     margin-top: 20px;
   }
 
@@ -360,7 +359,9 @@ li {
     border: 2px solid #7788999c;
     border-radius: 20px;
   }
+
   .tarjetaTec1 {
+    font-size: 2rem;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -375,6 +376,7 @@ li {
     border: 2px solid #7788999c;
     border: 2px solid #7788999c;
     width: 100%;
+    font-size: 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -430,12 +432,25 @@ li {
   .hagamoslo {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    gap: 30px;
+    text-align: center;
     background-color: #141c3a;
     box-shadow: 0 5px 5px 0 rgb(0 0 0 / 20%), 0 0 0 1px #141c3a;
     color: white;
-    height: 300px;
+    height: 360px;
     width: 80%;
+    padding-top: 30px;
+    padding-bottom: 30px;
     border-radius: 25px;
+  }
+
+  .btnHagamoslo {
+    background-color: #141c3a;
+    border: 2px solid #5be9b9;
+    color: white;
+    cursor: pointer;
+    font-size: 2rem;
+    border-radius: 25px;
+    padding: 10px 20px;
   }
 }

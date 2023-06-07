@@ -21,7 +21,9 @@ export const Body = () => {
         <main className="main">
           <div id="background1" className="background">
             <div className="presentacion">
-              <p>Hola soy Ignacio, me dicen Nacho. Encantado de conocerte.</p>
+              <p className="introPresentacion">
+                Hola soy Ignacio, me dicen Nacho. Encantado de conocerte.
+              </p>
               <p className="textoPresentacion">
                 Me considero un apasionado de la tecnología, con excelente
                 interrelación personal y en constante búsqueda de nuevos

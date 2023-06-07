@@ -56,6 +56,7 @@ a {
     width: 100%;
     height: 100%;
     display: flex;
+    margin: 0 auto;
     flex-direction: column;
   }
   .logotype {
@@ -68,6 +69,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin: 0 auto;
   }
 
   h1 {
@@ -85,6 +87,7 @@ a {
 
   .btn2 {
     border: 2px solid #6e07f3;
+    background-color: white;
     height: 100%;
     width: 100%;
     border-radius: 30px;
