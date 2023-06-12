@@ -143,7 +143,7 @@ li {
 }
 
 .galeriaProyectos > div:hover {
-  flex: 5;
+  flex: 2;
   width: 100%;
 }
 
@@ -430,13 +430,14 @@ li {
 
   .hagamoslo {
     display: flex;
+    flex-direction: column;
     gap: 30px;
     text-align: center;
     background-color: #141c3a;
     box-shadow: 0 5px 5px 0 rgb(0 0 0 / 20%), 0 0 0 1px #141c3a;
     color: white;
-    height: 360px;
-    width: 80%;
+    height: 450px;
+    width: 70%;
     padding-top: 30px;
     padding-bottom: 30px;
     border-radius: 25px;
