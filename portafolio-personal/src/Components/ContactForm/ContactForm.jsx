@@ -85,14 +85,23 @@ export const ContactForm = () => {
             </div>
             <div className="comentario">
               <label htmlFor="comentaio">Ingrese un comentario</label>
-              <input
+              <textarea
+                className="comentario-area"
+                name="comentario"
+                id="comentario"
+                cols="30"
+                rows="8"
+                placeholder="Ingresá un comentrio . . ."
+                maxlength="500"
+              />
+              {/* <input
                 type="text"
                 name="comentario"
                 id="comentario"
                 value={values.comentario}
                 onChange={handleChange}
                 onBlur={handleBlur}
-              />
+              /> */}
             </div>
             <button className="btn-form" type="submit">
               Enviar
