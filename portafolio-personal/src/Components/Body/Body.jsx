@@ -1,16 +1,53 @@
-import React from "react";
+import React, { useState, useRef } from "react";
 import { Nav } from "../NavBar/Nav";
 import "../Body/Body.css";
 import linkedin from "../../icons/linkedin.svg";
 import github from "../../icons/github.svg";
 import mail from "../../icons/mail.svg";
+import { ContactForm } from "../ContactForm/ContactForm";
 
 export const Body = () => {
+  const background1 = useRef(null);
+  const tecnologias = useRef(null);
+  const proyectos = useRef(null);
+  const hagamoslo = useRef(null);
+
+  const ScrollToBackground1 = () => {
+    background1.current.scrollIntoView({ behavior: "smooth" });
+  };
+
+  const ScrollToTecnologias = () => {
+    tecnologias.current.scrollIntoView({ behavior: "smooth" });
+  };
+
+  const ScrollToProyectos = () => {
+    proyectos.current.scrollIntoView({ behavior: "smooth" });
+  };
+  const ScrollToHagamoslo = () => {
+    hagamoslo.current.scrollIntoView({ behavior: "smooth" });
+  };
+  // --------------------------------------
+
+  const [mostrarForm, setMostrarForm] = useState(false);
+
+  const handleMostrarForm = () => {
+    setMostrarForm(true);
+  };
+
+  const handleCerrarForm = () => {
+    setMostrarForm(false);
+  };
+
   return (
     <>
       <div className="body">
         <header className="bodyPage">
-          <Nav />
+          <Nav
+            ScrollToBackground1={ScrollToBackground1}
+            ScrollToTecnologias={ScrollToTecnologias}
+            ScrollToProyectos={ScrollToProyectos}
+            ScrollToHagamoslo={ScrollToHagamoslo}
+          />
           <h1 className="title">Desarrollador Web Full Stack</h1>
           <p>Desarrollo paginas web, amo lo que hago</p>
           <div className="profileImg"></div>
@@ -19,7 +56,7 @@ export const Body = () => {
           </div>
         </header>
         <main className="main">
-          <div id="background1" className="background">
+          <div id="background1" ref={background1} className="background">
             <div className="presentacion">
               <p className="introPresentacion">
                 Hola soy Ignacio, me dicen Nacho. Encantado de conocerte.
@@ -38,7 +75,7 @@ export const Body = () => {
               </p>
             </div>
           </div>
-          <div id="tecnologias" className="tecnologias">
+          <div id="tecnologias" ref={tecnologias} className="tecnologias">
             <div className="tarjetaTec1">
               <img
                 className="front"
@@ -114,7 +151,7 @@ export const Body = () => {
               </ul>
             </div>
           </div>
-          <div id="proyectos" className="proyectos">
+          <div id="proyectos" ref={proyectos} className="proyectos">
             <h2>Trabajos recientes</h2>
             <p>Aquí hay algunos proyectos en los que he trabajado</p>
           </div>
@@ -152,14 +189,17 @@ export const Body = () => {
           </div>
         </main>
         <footer>
-          <div id="hagamoslo" className="hagamoslo">
+          <div id="hagamoslo" ref={hagamoslo} className="hagamoslo">
             <h2>Iniciar un proyecto</h2>
             <p>
               ¿Interesad@ en trabajar juntos? <br /> Deberiamos agendar una
               reunion. <br /> Yo invito el cafe.
             </p>
-            <button className="btnHagamoslo">🤘🏻 Hagámoslo</button>
+            <button className="btnHagamoslo" onClick={handleMostrarForm}>
+              🤘🏻 Hagámoslo
+            </button>
           </div>
+          {mostrarForm && <ContactForm cerrarForm={handleCerrarForm} />}
           <div className="background2">
             <a href="#nav">
               <img

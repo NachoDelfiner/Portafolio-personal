@@ -1,7 +1,12 @@
 import React from "react";
 import "../NavBar/Nav.css";
 
-export const Nav = () => {
+export const Nav = ({
+  ScrollToBackground1,
+  ScrollToTecnologias,
+  ScrollToProyectos,
+  ScrollToHagamoslo,
+}) => {
   return (
     <nav id="nav" className="navBar">
       <div>
@@ -12,19 +17,22 @@ export const Nav = () => {
         />
       </div>
       <div className="btns">
-        <button className="btn">
-          <a href="#background1">Sobre Mi</a>
+        <button
+          className="btn"
+          onClick={() => {
+            ScrollToBackground1();
+          }}
+        >
+          Sobre Mi
         </button>
-        <button className="btn">
-          <a href="#tecnologias">Tecnologias</a>
+        <button className="btn" onClick={ScrollToTecnologias}>
+          Tecnologías
         </button>
-        <button className="btn">
-          <a href="#proyectos">Proyectos</a>
+        <button className="btn" onClick={ScrollToProyectos}>
+          Proyectos
         </button>
-        <button className="btn2 btnHover">
-          <a className="btnHover" href="#hagamoslo">
-            Contactame
-          </a>
+        <button className="btn2 btnHover" onClick={ScrollToHagamoslo}>
+          Contáctame
         </button>
       </div>
     </nav>

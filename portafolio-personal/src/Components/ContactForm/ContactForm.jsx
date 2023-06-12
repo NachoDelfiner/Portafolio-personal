@@ -1,12 +1,22 @@
 import React from "react";
 import { useState } from "react";
 import "../ContactForm/ContactForm.css";
-import { Formik } from "formik";
+import { Formik, Form, Field, ErrorMessage } from "formik";
+import cross from "../../icons/cross.svg";
 
-export const ContactForm = () => {
+export const ContactForm = ({ cerrarForm }) => {
   const [formEnviado, setformEnviado] = useState(false);
   return (
     <div className="bodyForm">
+      <button
+        id="cross"
+        className="cerrarForm"
+        onClick={() => {
+          cerrarForm();
+        }}
+      >
+        <img className="cross" src={cross} alt="boton de cierre" />
+      </button>
       <h3>Pongámosnos en contacto</h3>
       <Formik
         initialValues={{
@@ -42,66 +52,49 @@ export const ContactForm = () => {
           console.log("formulario enviado");
         }}
       >
-        {({
-          handleSubmit,
-          errors,
-          touched,
-          values,
-          handleChange,
-          handleBlur,
-        }) => (
-          <form onSubmit={handleSubmit}>
+        {({ errors }) => (
+          <Form>
             <div className="nombre">
               <label htmlFor="nombre">Nombre *</label>
-              <input
+              <Field
                 type="text"
                 name="nombre"
                 id="nombre"
                 placeholder="Ingresa tu nombre"
                 required
-                value={values.nombre}
-                onChange={handleChange}
-                onBlur={handleBlur}
               />
-              {touched.nombre && errors.nombre && (
-                <div className="error">{errors.nombre}</div>
-              )}
+              <ErrorMessage
+                name="nombre"
+                component={() => <div className="error">{errors.nombre}</div>}
+              />
             </div>
             <div className="correo">
               <label htmlFor="correo">Correo *</label>
-              <input
+              <Field
                 type="email"
                 name="correo"
                 id="correo"
                 placeholder="ejemplo@ejemplo.com"
                 required
-                value={values.correo}
-                onChange={handleChange}
-                onBlur={handleBlur}
               />
-              {touched.correo && errors.correo && (
-                <div className="error">{errors.correo}</div>
-              )}
+              <ErrorMessage
+                name="correo"
+                component={() => <div className="error">{errors.correo}</div>}
+              />
             </div>
             <div className="comentario">
               <label htmlFor="comentaio">Ingrese un comentario</label>
-              <textarea
+
+              <Field
                 className="comentario-area"
                 name="comentario"
                 id="comentario"
+                as="textarea"
+                placeholder="Ingresá un comentrio . . ."
                 cols="30"
                 rows="8"
-                placeholder="Ingresá un comentrio . . ."
-                maxlength="500"
+                maxLength={500}
               />
-              {/* <input
-                type="text"
-                name="comentario"
-                id="comentario"
-                value={values.comentario}
-                onChange={handleChange}
-                onBlur={handleBlur}
-              /> */}
             </div>
             <button className="btn-form" type="submit">
               Enviar
@@ -109,7 +102,7 @@ export const ContactForm = () => {
             {formEnviado && (
               <p className="exito">Formulario enviado con exito!</p>
             )}
-          </form>
+          </Form>
         )}
       </Formik>
     </div>

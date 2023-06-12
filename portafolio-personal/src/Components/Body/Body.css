@@ -232,6 +232,7 @@ li {
   padding-bottom: 100px;
   background-color: #6e07f3;
   text-align: center;
+  position: relative;
 }
 
 .background2 p {
@@ -391,7 +392,6 @@ li {
     font-size: 3rem;
   }
 
-  /* ////////////////// */
   .tecnologias p {
     text-align: center;
     font: 2rem;
@@ -401,7 +401,6 @@ li {
     margin-top: 30px;
     font-size: larger;
   }
-  /* //////////////////// */
 
   .proyectos h2 {
     font-size: 3rem;
@@ -431,7 +430,6 @@ li {
 
   .hagamoslo {
     display: flex;
-    flex-direction: column;
     gap: 30px;
     text-align: center;
     background-color: #141c3a;
