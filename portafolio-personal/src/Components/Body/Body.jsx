@@ -1,10 +1,11 @@
 import React, { useState, useRef } from "react";
 import { Nav } from "../NavBar/Nav";
+import { ContactForm } from "../ContactForm/ContactForm";
 import "../Body/Body.css";
 import linkedin from "../../icons/linkedin.svg";
 import github from "../../icons/github.svg";
 import mail from "../../icons/mail.svg";
-import { ContactForm } from "../ContactForm/ContactForm";
+import phone from "../../icons/phone.svg";
 
 export const Body = () => {
   const background1 = useRef(null);
@@ -26,7 +27,6 @@ export const Body = () => {
   const ScrollToHagamoslo = () => {
     hagamoslo.current.scrollIntoView({ behavior: "smooth" });
   };
-  // --------------------------------------
 
   const [mostrarForm, setMostrarForm] = useState(false);
 
@@ -93,15 +93,15 @@ export const Body = () => {
               <ul>
                 <li className="html">HTML 5</li>
                 <li className="css">CSS 3</li>
-                <li className="javascript">JavaScript</li>
+                <li className="javaScript">JavaScript</li>
                 <li className="react">React</li>
               </ul>
               <span>Herramientas</span>
               <ul>
-                <li>Git</li>
-                <li>GitHub</li>
-                <li>Bootstrap</li>
-                <li>Netlify</li>
+                <li className="git">Git</li>
+                <li className="gitHubLi">GitHub</li>
+                <li className="bootstrap">Bootstrap</li>
+                <li className="netlify">Netlify</li>
               </ul>
             </div>
             <div className="tarjetaTec2">
@@ -121,8 +121,8 @@ export const Body = () => {
                 <strong>Tecnologias</strong>
               </span>
               <ul>
-                <li>SQL</li>
-                <li>PostgreSQL</li>
+                <li className="sql">SQL</li>
+                <li className="postgreSql">PostgreSQL</li>
               </ul>
             </div>
             <div className="tarjetaTec1">
@@ -141,13 +141,13 @@ export const Body = () => {
                 <strong>Tecnologias</strong>
               </span>
               <ul>
-                <li>Node.js</li>
+                <li className="node">Node.js</li>
               </ul>
               <span>
                 <strong>Herramientas</strong>
               </span>
               <ul>
-                <li>Postman</li>
+                <li className="postman">Postman</li>
               </ul>
             </div>
           </div>
@@ -188,7 +188,9 @@ export const Body = () => {
             <span>Profesor - Bootcamp Full Stack Web Developer</span>
           </div>
         </main>
+
         <footer>
+          {mostrarForm && <ContactForm cerrarForm={handleCerrarForm} />}
           <div id="hagamoslo" ref={hagamoslo} className="hagamoslo">
             <h2>Iniciar un proyecto</h2>
             <p>
@@ -200,7 +202,6 @@ export const Body = () => {
             </button>
           </div>
           <div className="background2">
-            {mostrarForm && <ContactForm cerrarForm={handleCerrarForm} />}
             <a href="#nav">
               <img
                 className="logotype2"
@@ -233,6 +234,11 @@ export const Body = () => {
               <div className="redSocial">
                 <a href="mailto:delfinerignacio@gmail.com" target="_blank">
                   <img className="mail" src={mail} alt="Logo de Mail" />
+                </a>
+              </div>
+              <div className="redSocial">
+                <a href="tel:+59898801456">
+                  <img className="phone" src={phone} alt="Logo de telefono" />
                 </a>
               </div>
             </div>

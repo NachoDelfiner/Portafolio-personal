@@ -1,6 +1,6 @@
 .bodyForm {
-  width: 50vh;
-  height: 80vh;
+  width: 500px;
+  height: 700px;
   border-radius: 30px;
   display: flex;
   flex-direction: column;
@@ -9,9 +9,9 @@
   color: white;
   position: relative;
   bottom: 200px;
-  left: 14%;
+  left: 50%;
   transform: translate(-50%);
-  z-index: 1;
+  z-index: 2;
   border: 5px solid white;
 }
 
@@ -29,23 +29,7 @@ form {
   background-color: #6e07f3;
 }
 
-.nombre {
-  display: flex;
-  flex-direction: column;
-  width: 80%;
-  gap: 5px;
-}
-.nombre label {
-  position: relative;
-  right: 60px;
-}
-
-.nombre input {
-  height: 2rem;
-  padding: 0 10px;
-  border: none;
-}
-
+.nombre,
 .correo {
   display: flex;
   flex-direction: column;
@@ -53,15 +37,12 @@ form {
   gap: 5px;
 }
 
-.correo label {
-  position: relative;
-  right: 70px;
-}
-
+.nombre input,
 .correo input {
   height: 2rem;
   padding: 0 10px;
   border: none;
+  font-family: "Josefin Sans", sans-serif;
 }
 
 .comentario-area {
@@ -72,11 +53,6 @@ form {
   padding: 10px;
   font-family: "Josefin Sans", sans-serif;
   resize: none;
-}
-
-.comentario label {
-  position: relative;
-  right: 30px;
 }
 
 input {
@@ -129,28 +105,28 @@ input {
 
 @media (min-width: 390px) and (max-width: 860px) {
   .bodyForm {
-    height: 860px;
-    width: 600px;
+    height: 900px;
+    width: 800px;
     border-radius: 30px;
     display: flex;
     flex-direction: column;
     background-color: #6e07f3;
     color: white;
     position: relative;
-    bottom: 100px;
-    left: 300px;
+    bottom: 0;
+    left: 400px;
     transform: translate(-50%);
-    z-index: 1;
+    z-index: 2;
     border: 5px solid white;
   }
 
   h3 {
     margin: 80px auto;
-    font-size: 1.9rem;
+    font-size: 3.5rem;
   }
 
   label {
-    font-size: 1.5rem;
+    font-size: 2.5rem;
   }
 
   form {
@@ -162,7 +138,8 @@ input {
     background-color: #6e07f3;
   }
 
-  .nombre {
+  .nombre,
+  .correo {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -171,43 +148,37 @@ input {
 
   .nombre label {
     position: relative;
-    right: 170px;
-  }
-
-  .nombre input {
-    width: 100%;
-    height: 2rem;
-    padding: 0 10px;
-    border: none;
-  }
-
-  .correo {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    gap: 5px;
+    right: 220px;
   }
 
   .correo label {
     position: relative;
-    right: 170px;
+    right: 235px;
+  }
+
+  .nombre input,
+  .correo input {
+    width: 100%;
+    height: 3.5rem;
+    padding: 0 10px;
+    border: none;
+    font-size: 1.5rem;
+    font-family: "Josefin Sans", sans-serif;
   }
 
   .comentario label {
     position: relative;
-    right: 95px;
+    right: -15px;
   }
 
-  .correo input {
-    width: 100%;
-    height: 2rem;
-    padding: 0 10px;
-    border: none;
+  .comentario-area {
+    font-size: 1.5rem;
+    font-family: "Josefin Sans", sans-serif;
   }
 
   .cerrarForm {
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     position: absolute;
     top: 20px;
     left: 20px;
@@ -215,15 +186,20 @@ input {
     cursor: pointer;
     background-color: #6e07f3;
   }
+
+  .cross {
+    width: 40px;
+    height: 40px;
+  }
+
   .btn-form {
     margin: 0 auto;
-    height: 40px;
-    width: 120px;
-    border: 3px solid white;
+    height: 60px;
+    width: 200px;
+    border: 4px solid white;
     border-radius: 30px;
     background-color: #6e07f3;
     color: white;
-    font-size: 1.2rem;
-    margin-bottom: 20px;
+    font-size: 2rem;
   }
 }

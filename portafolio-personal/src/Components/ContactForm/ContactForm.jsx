@@ -3,8 +3,26 @@ import { useState } from "react";
 import "../ContactForm/ContactForm.css";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import cross from "../../icons/cross.svg";
+import axios from "axios";
 
 export const ContactForm = ({ cerrarForm }) => {
+  const handleSubmit = async (values, { setSubmitting }) => {
+    try {
+      const response = await axios.post(
+        "https://formspree.io/delfinerignacio@gmail.com",
+        values
+      );
+
+      if (response.status === 200) {
+        console.log("Formulario enviado correctamente");
+      }
+    } catch (error) {
+      console.error("Error al enviar el formulario", error);
+    }
+
+    setSubmitting(false);
+  };
+
   const [formEnviado, setformEnviado] = useState(false);
   return (
     <div className="bodyForm">
@@ -91,8 +109,8 @@ export const ContactForm = ({ cerrarForm }) => {
                 id="comentario"
                 as="textarea"
                 placeholder="Ingresá un comentrio . . ."
-                cols="30"
-                rows="8"
+                cols="20"
+                rows="10"
                 maxLength={500}
               />
             </div>
