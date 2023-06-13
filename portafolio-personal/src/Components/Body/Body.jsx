@@ -91,17 +91,69 @@ export const Body = () => {
                 <strong>Tecnologias</strong>
               </span>
               <ul>
-                <li className="html">HTML 5</li>
-                <li className="css">CSS 3</li>
-                <li className="javaScript">JavaScript</li>
-                <li className="react">React</li>
+                <li>
+                  <img
+                    className="tecIcon"
+                    src="iconos/html.png"
+                    alt="logo html"
+                  />{" "}
+                  HTML 5
+                </li>
+                <li>
+                  <img
+                    className="tecIcon"
+                    src="iconos/css.png"
+                    alt="css icon"
+                  />{" "}
+                  CSS 3
+                </li>
+                <li>
+                  <img className="tecIcon" src="iconos/js.png" alt="js icon" />{" "}
+                  JavaScript
+                </li>
+                <li>
+                  <img
+                    className="tecIcon"
+                    src="iconos/react.png"
+                    alt="react icon"
+                  />{" "}
+                  React
+                </li>
               </ul>
               <span>Herramientas</span>
               <ul>
-                <li className="git">Git</li>
-                <li className="gitHubLi">GitHub</li>
-                <li className="bootstrap">Bootstrap</li>
-                <li className="netlify">Netlify</li>
+                <li>
+                  <img
+                    className="tecIcon"
+                    src="iconos/git.png"
+                    alt="git icon"
+                  />{" "}
+                  Git
+                </li>
+                <li>
+                  <img
+                    className="tecIcon"
+                    src="iconos/github2.png"
+                    alt="gitHub icon"
+                  />{" "}
+                  GitHub
+                </li>
+                <li>
+                  <img
+                    className="tecIcon"
+                    src="iconos/bootstrap.jpg"
+                    alt="bootstrap icon"
+                  />{" "}
+                  Bootstrap
+                </li>
+                <li>
+                  <img
+                    className="tecIcon"
+                    src="iconos/netlify.png"
+                    alt="netlify icon"
+                  />{" "}
+                  Netlify
+                </li>
               </ul>
             </div>
             <div className="tarjetaTec2">
@@ -121,8 +173,22 @@ export const Body = () => {
                 <strong>Tecnologias</strong>
               </span>
               <ul>
-                <li className="sql">SQL</li>
-                <li className="postgreSql">PostgreSQL</li>
+                <li>
+                  <img
+                    className="tecIcon"
+                    src="iconos/sql.png"
+                    alt="sql icon"
+                  />{" "}
+                  SQL
+                </li>
+                <li>
+                  <img
+                    className="tecIcon"
+                    src="iconos/postgresql.png"
+                    alt="postgre icon"
+                  />{" "}
+                  PostgreSQL
+                </li>
               </ul>
             </div>
             <div className="tarjetaTec1">
@@ -141,13 +207,27 @@ export const Body = () => {
                 <strong>Tecnologias</strong>
               </span>
               <ul>
-                <li className="node">Node.js</li>
+                <li>
+                  <img
+                    className="tecIcon tecIcon2"
+                    src="iconos/node.jpeg"
+                    alt="node icon"
+                  />
+                  Node.js
+                </li>
               </ul>
               <span>
                 <strong>Herramientas</strong>
               </span>
               <ul>
-                <li className="postman">Postman</li>
+                <li>
+                  <img
+                    className="tecIcon"
+                    src="iconos/postman.png"
+                    alt="postman icon"
+                  />{" "}
+                  Postman
+                </li>
               </ul>
             </div>
           </div>
