@@ -61,7 +61,7 @@ export const Nav = ({
             Proyectos
           </button>
           <button
-            className="btn2 btnHover"
+            className="btn2"
             onClick={() => {
               ScrollToHagamoslo();
               closeBtns();

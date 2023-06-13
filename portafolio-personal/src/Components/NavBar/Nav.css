@@ -23,6 +23,7 @@
   border: none;
   height: 40px;
   width: 80px;
+  color: black;
   background-color: white;
   font-size: 1rem;
   cursor: pointer;
@@ -36,9 +37,6 @@
   border-radius: 30px;
   font-size: 1rem;
   cursor: pointer;
-}
-
-.btnHover {
   color: #6e07f3;
 }
 
@@ -87,6 +85,7 @@
     height: 50px;
     width: 100%;
     background-color: white;
+    color: black;
     font-size: 1.5rem;
     cursor: pointer;
   }
@@ -103,21 +102,12 @@
     padding-top: 10px;
     padding-bottom: 10px;
     cursor: pointer;
-  }
-
-  .btnHover {
     color: #6e07f3;
   }
 
   .btnHover:hover {
     background-color: #6e07f3;
     color: white;
-  }
-
-  a {
-    text-decoration: none;
-    color: black;
-    font-size: 2rem;
   }
 
   .btns.active {
