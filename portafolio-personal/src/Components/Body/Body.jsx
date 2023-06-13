@@ -199,8 +199,8 @@ export const Body = () => {
               🤘🏻 Hagámoslo
             </button>
           </div>
-          {mostrarForm && <ContactForm cerrarForm={handleCerrarForm} />}
           <div className="background2">
+            {mostrarForm && <ContactForm cerrarForm={handleCerrarForm} />}
             <a href="#nav">
               <img
                 className="logotype2"

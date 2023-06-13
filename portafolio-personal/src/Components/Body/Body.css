@@ -170,7 +170,7 @@ li {
   gap: 30px;
   width: 50%;
   margin: 0 auto;
-  margin-top: 200px;
+  margin-top: 100px;
   margin-bottom: 50px;
 }
 
@@ -218,7 +218,7 @@ li {
 .logotype2 {
   height: 200px;
   width: 200px;
-  margin-top: 150px;
+  margin-top: 100px;
   cursor: pointer;
 }
 
@@ -229,10 +229,10 @@ li {
   gap: 30px;
   color: white;
   width: 100%;
+  height: 600px;
   padding-bottom: 100px;
   background-color: #6e07f3;
   text-align: center;
-  position: relative;
 }
 
 .background2 p {
@@ -441,6 +441,7 @@ li {
     padding-top: 30px;
     padding-bottom: 30px;
     border-radius: 25px;
+    position: relative;
   }
 
   .btnHagamoslo {
@@ -451,5 +452,17 @@ li {
     font-size: 2rem;
     border-radius: 25px;
     padding: 10px 20px;
+  }
+  .background2 {
+    height: 800px;
+    margin-top: -50px;
+    position: relative;
+  }
+
+  .logotype2 {
+    height: 200px;
+    width: 200px;
+    margin-top: 150px;
+    cursor: pointer;
   }
 }

@@ -10,10 +10,10 @@ const router = createBrowserRouter([
     path: "/",
     element: <Body />,
   },
-  // {
-  //   path: "/form",
-  //   element: <ContactForm />,
-  // },
+  {
+    path: "/form",
+    element: <ContactForm />,
+  },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
