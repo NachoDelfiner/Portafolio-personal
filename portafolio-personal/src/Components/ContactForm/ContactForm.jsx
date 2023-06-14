@@ -8,13 +8,12 @@ import axios from "axios";
 export const ContactForm = ({ cerrarForm }) => {
   const handleSubmit = async (values, { setSubmitting }) => {
     try {
-      const response = await axios.post(
-        "https://formspree.io/delfinerignacio@gmail.com",
-        values
-      );
+      const response = await axios.post("/", values);
 
       if (response.status === 200) {
         console.log("Formulario enviado correctamente");
+        setformEnviado(true);
+        setTimeout(() => setformEnviado(false), 5000);
       }
     } catch (error) {
       console.error("Error al enviar el formulario", error);
@@ -71,7 +70,7 @@ export const ContactForm = ({ cerrarForm }) => {
         }}
       >
         {({ errors }) => (
-          <Form>
+          <Form action="/" method="POST">
             <div className="nombre">
               <label htmlFor="nombre">Nombre *</label>
               <Field
