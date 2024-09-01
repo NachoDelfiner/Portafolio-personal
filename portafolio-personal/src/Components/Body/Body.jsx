@@ -59,7 +59,7 @@ export const Body = () => {
           <div id="background1" ref={background1} className="background">
             <div className="presentacion">
               <p className="introPresentacion">
-                Hola soy Ignacio, me dicen Nacho. Encantado de conocerte.
+                Hola soy Ignacio, me dicen Nacho. <br /> Encantado de conocerte.
               </p>
               <p className="textoPresentacion">
                 Soy un apasionado del diseño orientado a las ventas, diseño web
