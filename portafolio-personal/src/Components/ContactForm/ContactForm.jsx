@@ -114,6 +114,7 @@ export const ContactForm = ({ cerrarForm }) => {
             border: "1px solid white",
             borderRadius: "5px",
             padding: "10px",
+            resize: "none",
           }}
           className="message-textarea"
           id="message"

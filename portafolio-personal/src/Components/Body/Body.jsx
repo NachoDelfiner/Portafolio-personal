@@ -49,7 +49,7 @@ export const Body = () => {
             ScrollToHagamoslo={ScrollToHagamoslo}
           />
           <h1 className="title">Desarrollador Web Full Stack</h1>
-          <p>Desarrollo páginas web, amo lo que hago</p>
+          <p>Desarrollo y diseño páginas web</p>
           <div className="profileImg"></div>
           <div className="stup">
             <img src="./img/stup.png" alt="imagen decorativa de un Stup" />
@@ -62,16 +62,20 @@ export const Body = () => {
                 Hola soy Ignacio, me dicen Nacho. Encantado de conocerte.
               </p>
               <p className="textoPresentacion">
-                Me considero un apasionado de la tecnología, con excelente
-                interrelación personal y en constante búsqueda de nuevos
-                aprendizajes y desafios. Siempre orientado a trabajar con
-                metodologías ágiles, aplico Scrum para mejorar la productividad
-                y calidad de los resultados. Como programador mi objetivo es
-                obtener mi primera experiencia laboral en el mundo TI, buscando
-                la oportunidad de posicionarme en el sector y continuar mi
-                desarrollo. Mi objetivo es aplicar y ampliar mis conocimientos
-                técnicos, adquirir experiencia práctica en proyectos reales y
-                colaborar en un entorno de trabajo estimulante.
+                Soy un apasionado del diseño orientado a las ventas, diseño web
+                y desarrollo web, siempre buscando mejorar la experiencia del
+                usuario y optimizar los resultados de negocio. Me destaco por mi
+                receptividad y mi excelente comunicación interpersonal, lo que
+                me permite comprender y satisfacer las necesidades de los
+                clientes de manera efectiva. Mi empatía y habilidad para
+                trabajar en equipo me ayudan a crear soluciones innovadoras en
+                un entorno colaborativo. Comprometido con el aprendizaje
+                constante y la superación de nuevos desafíos, aplico
+                metodologías ágiles como Scrum para garantizar la productividad
+                y calidad en los proyectos que desarrollo. Tengo como objetivo
+                obtener una experiencia laboral que me permita aplicar mis
+                conocimientos técnicos y continuar creciendo en el mundo de la
+                tecnología y el diseño.
               </p>
             </div>
           </div>
@@ -237,26 +241,47 @@ export const Body = () => {
           </div>
           <div className="galeriaProyectos">
             <div>
-              <a href="https://pokedex-proyecto.netlify.app/" target="_blank">
-                <img src="./img/pokedex2.png" alt="Portada Pokedex" />
-              </a>
-            </div>
-            <div>
-              <a href="https://autovip-proyecto.netlify.app/" target="_blank">
-                <img src="./img/autoVip.png" alt="Portada AUTOVIP" />
-              </a>
-            </div>
-            <div>
-              <a href="https://vos-salon-estetico.netlify.app/" target="_blank">
+              <a
+                href="https://template-1-teethbot.netlify.app/"
+                target="_blank"
+              >
                 <img
-                  src="./img/vos-salon-estetico.png"
-                  alt="portada vos salon estetico"
+                  src="./img/plantilla_1.png"
+                  alt="Muestra de proyecto - plantilla 1 dentista"
                 />
               </a>
             </div>
             <div>
-              <a href="#" target="_blank">
-                <img src="./img/audn.png" alt="Portada audn" />
+              <a
+                href="https://template-2-teethbot.netlify.app/"
+                target="_blank"
+              >
+                <img
+                  src="./img/plantilla_2.png"
+                  alt="Muestra de proyecto - plantilla 2 dentista"
+                />
+              </a>
+            </div>
+            <div>
+              <a
+                href="https://template-3-teethbot.netlify.app/"
+                target="_blank"
+              >
+                <img
+                  src="./img/plantilla_3.png"
+                  alt="Muestra de proyecto - plantilla 3 dentista"
+                />
+              </a>
+            </div>
+            <div>
+              <a
+                href="https://template-4-teethbot.netlify.app/"
+                target="_blank"
+              >
+                <img
+                  src="./img/plantilla_4.png"
+                  alt="Muestra de proyecto - plantilla 4 dentista"
+                />
               </a>
             </div>
           </div>
@@ -273,17 +298,17 @@ export const Body = () => {
               excepcionales!"
             </p>
             <h4>Francisco Recalde</h4>
-            <span>Profesor - Bootcamp Full Stack Web Developer</span>
+            <span>Profesor Bootcamp Full Stack Web Developer</span>
           </div>
         </main>
 
         <footer>
           {mostrarForm && <ContactForm cerrarForm={handleCerrarForm} />}
           <div id="hagamoslo" ref={hagamoslo} className="hagamoslo">
-            <h2>Iniciar un proyecto</h2>
+            <h2>Contactame!</h2>
             <p>
-              ¿Interesad@ en trabajar juntos? <br /> Deberiamos agendar una
-              reunión. <br /> Yo invito el café.
+              Me encantaría escuchar tu propuesta. <br />
+              Voy a estar muy emocionado de escucharla!{" "}
             </p>
             <button className="btnHagamoslo" onClick={handleMostrarForm}>
               🤘🏻 Hagámoslo
@@ -312,11 +337,6 @@ export const Body = () => {
                     src={linkedin}
                     alt="Icono de Likedin"
                   />
-                </a>
-              </div>
-              <div className="redSocial">
-                <a href="https://github.com/NachoDelfiner" target="_blank">
-                  <img className="gitHub" src={github} alt="Logo de GitHub" />
                 </a>
               </div>
               <div className="redSocial">
