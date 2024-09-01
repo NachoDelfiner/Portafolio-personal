@@ -1,127 +1,138 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
+import { useForm } from "@formspree/react";
 import "../ContactForm/ContactForm.css";
-import { Formik, Form, Field, ErrorMessage } from "formik";
 import cross from "../../icons/cross.svg";
-import axios from "axios";
 
 export const ContactForm = ({ cerrarForm }) => {
-  const handleSubmit = async (values, { setSubmitting }) => {
-    try {
-      const response = await axios.post("/", values);
+  const [state, handleSubmit] = useForm("xknadrvp");
+  const [valorInputNombre, setValorInputNombre] = useState("");
+  const [valorInputEmail, setValorInputEmail] = useState("");
+  const [msjErrorNombre, setMsjErrorNombre] = useState("");
+  const [msjErrorEmail, setMsjErrorEmail] = useState("");
+  const [mostrarMsjExito, setMostrarMsjExito] = useState(false);
 
-      if (response.status === 200) {
-        console.log("Formulario enviado correctamente");
-        setformEnviado(true);
-        setTimeout(() => setformEnviado(false), 5000);
-      }
-    } catch (error) {
-      console.error("Error al enviar el formulario", error);
+  const handleFormSubmit = (e) => {
+    // Evita el envio del formulario al apretar enviar sin antes ser evaluados los campos
+    e.preventDefault();
+
+    // Realiza la validación de los campos antes de enviar el formulario
+    validacionNombre();
+    validacionEmail();
+
+    // Llama a handleSubmit() solo si no hay errores de validacion
+    if (!msjErrorNombre && !msjErrorEmail) {
+      handleSubmit(e);
+      setMostrarMsjExito(true);
     }
-
-    setSubmitting(false);
   };
 
-  const [formEnviado, setformEnviado] = useState(false);
+  // Cambia el estado del input nombre
+  const handleInputNombre = (e) => {
+    setValorInputNombre(e.target.value);
+  };
+
+  // Cambia el estado del input Email
+  const handleInputEmail = (e) => {
+    setValorInputEmail(e.target.value);
+  };
+
+  // Logica de validacion del nombre
+  const validacionNombre = () => {
+    if (valorInputNombre === "") {
+      setMsjErrorNombre("Por favor ingresá tu nombre");
+    } else if (!/^[a-zA-ZÀ-ÿ\s]{1,40}$/.test(valorInputNombre)) {
+      setMsjErrorNombre("El nombre solo puede contener letras y espacios");
+    } else {
+      setMsjErrorNombre("");
+    }
+  };
+
+  // Logica de validacion del email
+  const validacionEmail = () => {
+    if (valorInputEmail === "") {
+      setMsjErrorEmail("Por favor ingresá tu correo");
+    } else if (
+      !/^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/.test(valorInputEmail)
+    ) {
+      setMsjErrorEmail(
+        "El correo solo puede contener letras, numeros, puntos, guiones y guiones bajos"
+      );
+    } else {
+      setMsjErrorEmail("");
+    }
+  };
+
   return (
-    <div className="bodyForm">
-      <button
-        id="cross"
-        className="cerrarForm"
-        onClick={() => {
-          cerrarForm();
-        }}
-      >
-        <img className="cross" src={cross} alt="boton de cierre" />
+    <form onSubmit={handleFormSubmit}>
+      <img
+        onClick={cerrarForm}
+        className="cross"
+        src={cross}
+        alt="boton de cerrar"
+      />
+      <h3 className="titule-form">Pongámosnos en contacto</h3>
+
+      <div className="datos">
+        <label htmlFor="text">Nombre*</label> <br />
+        <input
+          id="name"
+          type="text"
+          name="text"
+          placeholder="Escribe tu nombre"
+          required
+          value={valorInputNombre}
+          onChange={handleInputNombre}
+          onBlur={validacionNombre}
+        />{" "}
+        <br />
+        <div className="error-input">{msjErrorNombre}</div>
+      </div>
+
+      <div className="datos">
+        <label htmlFor="email">Correo*</label> <br />
+        <input
+          id="email"
+          type="email"
+          name="email"
+          placeholder="correo@correo.com"
+          required
+          value={valorInputEmail}
+          onChange={handleInputEmail}
+          onBlur={validacionEmail}
+        />{" "}
+        <br />
+        <div className="error-input">{msjErrorEmail}</div>
+      </div>
+
+      <div className="message">
+        <label htmlFor="message">Escribí un comentario</label>
+        <br />
+        <textarea
+          style={{
+            width: "100%",
+            height: "150px",
+            border: "1px solid white",
+            borderRadius: "5px",
+            padding: "10px",
+          }}
+          className="message-textarea"
+          id="message"
+          name="message"
+          cols="42"
+          rows="10"
+          maxLength={500}
+        />
+      </div>
+
+      <button className="btn-from" type="submit" disabled={state.submitting}>
+        Enviar
       </button>
-      <h3>Pongámosnos en contacto</h3>
-      <Formik
-        initialValues={{
-          nombre: "",
-          correo: "",
-          comentario: "",
-        }}
-        validate={(valores) => {
-          let errores = {};
-          if (!valores.nombre) {
-            errores.nombre = "Por favor ingresá tu nombre";
-          } else if (!/^[a-zA-ZÀ-ÿ\s]{1,40}$/.test(valores.nombre)) {
-            errores.nombre = "El nombre solo puede contener letras y espacios";
-          }
-
-          if (!valores.correo) {
-            errores.correo = "Por favor ingresá tu correo";
-          } else if (
-            !/^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/.test(
-              valores.correo
-            )
-          ) {
-            errores.correo =
-              "El correo solo puede contener letras, numeros, puntos, guiones y guiones bajos";
-          }
-
-          return errores;
-        }}
-        onSubmit={(valores, { resetForm }) => {
-          resetForm();
-          setformEnviado(true);
-          setTimeout(() => setformEnviado(false), 5000);
-          console.log("formulario enviado");
-        }}
-      >
-        {({ errors }) => (
-          <Form action="/" method="POST">
-            <div className="nombre">
-              <label htmlFor="nombre">Nombre *</label>
-              <Field
-                type="text"
-                name="nombre"
-                id="nombre"
-                placeholder="Ingresa tu nombre"
-                required
-              />
-              <ErrorMessage
-                name="nombre"
-                component={() => <div className="error">{errors.nombre}</div>}
-              />
-            </div>
-            <div className="correo">
-              <label htmlFor="correo">Correo *</label>
-              <Field
-                type="email"
-                name="correo"
-                id="correo"
-                placeholder="ejemplo@ejemplo.com"
-                required
-              />
-              <ErrorMessage
-                name="correo"
-                component={() => <div className="error">{errors.correo}</div>}
-              />
-            </div>
-            <div className="comentario">
-              <label htmlFor="comentaio">Ingrese un comentario</label>
-
-              <Field
-                className="comentario-area"
-                name="comentario"
-                id="comentario"
-                as="textarea"
-                placeholder="Ingresá un comentrio . . ."
-                cols="20"
-                rows="10"
-                maxLength={500}
-              />
-            </div>
-            <button className="btn-form" type="submit">
-              Enviar
-            </button>
-            {formEnviado && (
-              <p className="exito">Formulario enviado con exito!</p>
-            )}
-          </Form>
-        )}
-      </Formik>
-    </div>
+      {mostrarMsjExito && (
+        <p className="mensaje-exito">El formulario se envio con exito! 🎉</p>
+      )}
+    </form>
   );
+};
+export const App = () => {
+  return <ContactForm />;
 };

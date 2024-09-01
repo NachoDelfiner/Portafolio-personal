@@ -67,7 +67,7 @@ export const Nav = ({
               closeBtns();
             }}
           >
-            Contactame
+            Contáctame
           </button>
         </div>
       </div>

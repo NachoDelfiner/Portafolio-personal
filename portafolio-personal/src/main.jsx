@@ -1,9 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import {
+  createBrowserRouter,
+  Navigate,
+  RouterProvider,
+} from "react-router-dom";
 import "./index.css";
 import { Body } from "./Components/Body/Body";
-import { ContactForm } from "./Components/ContactForm/ContactForm";
+import { NotFound } from "./Components/NotFound/NotFound";
 
 const router = createBrowserRouter([
   {
@@ -11,8 +15,12 @@ const router = createBrowserRouter([
     element: <Body />,
   },
   {
-    path: "/form",
-    element: <ContactForm />,
+    path: "/not_Found",
+    element: <NotFound />,
+  },
+  {
+    path: "*",
+    element: <Navigate to="/not_Found" />,
   },
 ]);
 

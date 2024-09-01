@@ -49,7 +49,7 @@ export const Body = () => {
             ScrollToHagamoslo={ScrollToHagamoslo}
           />
           <h1 className="title">Desarrollador Web Full Stack</h1>
-          <p>Desarrollo paginas web, amo lo que hago</p>
+          <p>Desarrollo páginas web, amo lo que hago</p>
           <div className="profileImg"></div>
           <div className="stup">
             <img src="./img/stup.png" alt="imagen decorativa de un Stup" />
@@ -67,7 +67,7 @@ export const Body = () => {
                 aprendizajes y desafios. Siempre orientado a trabajar con
                 metodologías ágiles, aplico Scrum para mejorar la productividad
                 y calidad de los resultados. Como programador mi objetivo es
-                obtener mi primera experiencia laboral en el mundo TI buscando
+                obtener mi primera experiencia laboral en el mundo TI, buscando
                 la oportunidad de posicionarme en el sector y continuar mi
                 desarrollo. Mi objetivo es aplicar y ampliar mis conocimientos
                 técnicos, adquirir experiencia práctica en proyectos reales y
@@ -181,9 +181,9 @@ export const Body = () => {
                   />{" "}
                   SQL
                 </li>
-                <li>
+                <li className="liTecIcon3">
                   <img
-                    className="tecIcon"
+                    className="tecIcon3"
                     src="iconos/postgresql.png"
                     alt="postgre icon"
                   />{" "}
@@ -236,17 +236,25 @@ export const Body = () => {
             <p>Aquí hay algunos proyectos en los que he trabajado</p>
           </div>
           <div className="galeriaProyectos">
-            <div className="pokedext">
+            <div>
               <a href="https://pokedex-proyecto.netlify.app/" target="_blank">
                 <img src="./img/pokedex2.png" alt="Portada Pokedex" />
               </a>
             </div>
-            <div className="automotora">
+            <div>
               <a href="https://autovip-proyecto.netlify.app/" target="_blank">
                 <img src="./img/autoVip.png" alt="Portada AUTOVIP" />
               </a>
             </div>
-            <div className="reproductor">
+            <div>
+              <a href="https://vos-salon-estetico.netlify.app/" target="_blank">
+                <img
+                  src="./img/vos-salon-estetico.png"
+                  alt="portada vos salon estetico"
+                />
+              </a>
+            </div>
+            <div>
               <a href="#" target="_blank">
                 <img src="./img/audn.png" alt="Portada audn" />
               </a>
@@ -275,7 +283,7 @@ export const Body = () => {
             <h2>Iniciar un proyecto</h2>
             <p>
               ¿Interesad@ en trabajar juntos? <br /> Deberiamos agendar una
-              reunion. <br /> Yo invito el cafe.
+              reunión. <br /> Yo invito el café.
             </p>
             <button className="btnHagamoslo" onClick={handleMostrarForm}>
               🤘🏻 Hagámoslo

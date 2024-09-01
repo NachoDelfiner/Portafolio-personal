@@ -1,205 +1,142 @@
-.bodyForm {
-  width: 500px;
-  height: 700px;
-  border-radius: 30px;
-  display: flex;
-  flex-direction: column;
-  margin-bottom: -620px;
-  background-color: #6e07f3;
-  color: white;
-  position: relative;
-  bottom: 200px;
-  left: 50%;
-  transform: translate(-50%);
-  z-index: 2;
-  border: 5px solid white;
-}
-
-h3 {
-  margin: 40px auto;
-  font-size: 1.5rem;
-}
-
 form {
-  height: 70%;
-  padding: 0 30px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  background-color: #6e07f3;
-}
-
-.nombre,
-.correo {
-  display: flex;
-  flex-direction: column;
-  width: 80%;
-  gap: 5px;
-}
-
-.nombre input,
-.correo input {
-  height: 2rem;
-  padding: 0 10px;
-  border: none;
-  font-family: "Josefin Sans", sans-serif;
-}
-
-.comentario-area {
-  margin-top: 5px;
-  width: 100%;
-  max-height: 150px;
-  border-radius: 10px;
-  padding: 10px;
-  font-family: "Josefin Sans", sans-serif;
-  resize: none;
-}
-
-input {
-  border-radius: 10px;
-}
-
-.btn-form {
-  margin: 0 auto;
-  height: 40px;
-  width: 120px;
-  border: 3px solid white;
+  border: 5px solid white;
   border-radius: 30px;
   background-color: #6e07f3;
   color: white;
-  font-size: 1.2rem;
-}
-
-.btn-form:hover {
-  background-color: #ffffff;
-  color: #6e07f3;
-}
-
-.error {
-  color: white;
-  font-size: 1rem;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  margin-bottom: 10px;
-  margin-left: 10px;
-}
-
-.exito {
-  margin: 0 auto;
-}
-
-.cerrarForm {
-  width: 30px;
-  height: 30px;
-  position: relative;
-  top: 20px;
-  left: 20px;
-  border: none;
-  cursor: pointer;
-  background-color: #6e07f3;
+  width: 450px;
+  height: 650px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.5rem;
+  z-index: 2;
 }
 
 .cross {
   width: 30px;
   height: 30px;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+.titule-form {
+  margin: 0 auto;
+  font-size: 2rem;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+input {
+  padding-left: 10px;
+  width: 90%;
+  outline: none;
+  height: 2rem;
+  border: 1px solid white;
+  border-radius: 5px;
+}
+
+.datos {
+  margin-left: 35px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.message {
+  margin: 0 auto;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.btn-from {
+  width: 130px;
+  background-color: #6e07f3;
+  border: 3px solid white;
+  color: white;
+  cursor: pointer;
+  font-size: 1.2rem;
+  border-radius: 25px;
+  padding: 10px;
+  margin: 0 auto;
+}
+
+.btn-from:hover {
+  background-color: white;
+  border: 3px solid #6e07f3;
+  color: #6e07f3;
+}
+
+.error-input {
+  font-size: 1rem;
+  margin-top: 5px;
+}
+
+.mensaje-exito {
+  font-size: 1.5rem;
+  margin: 10px auto;
 }
 
 @media (min-width: 390px) and (max-width: 860px) {
-  .bodyForm {
-    height: 900px;
-    width: 800px;
-    border-radius: 30px;
-    display: flex;
-    flex-direction: column;
-    background-color: #6e07f3;
-    color: white;
-    position: relative;
-    bottom: 0;
-    left: 400px;
-    transform: translate(-50%);
-    z-index: 2;
-    border: 5px solid white;
-  }
-
-  h3 {
-    margin: 80px auto;
-    font-size: 3.5rem;
-  }
-
-  label {
-    font-size: 2.5rem;
-  }
-
   form {
-    height: 70%;
-    padding: 0 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    background-color: #6e07f3;
-  }
-
-  .nombre,
-  .correo {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    gap: 5px;
-  }
-
-  .nombre label {
-    position: relative;
-    right: 220px;
-  }
-
-  .correo label {
-    position: relative;
-    right: 235px;
-  }
-
-  .nombre input,
-  .correo input {
-    width: 100%;
-    height: 3.5rem;
-    padding: 0 10px;
-    border: none;
-    font-size: 1.5rem;
-    font-family: "Josefin Sans", sans-serif;
-  }
-
-  .comentario label {
-    position: relative;
-    right: -15px;
-  }
-
-  .comentario-area {
-    font-size: 1.5rem;
-    font-family: "Josefin Sans", sans-serif;
-  }
-
-  .cerrarForm {
-    width: 40px;
-    height: 40px;
+    width: 600px;
+    height: 750px;
     position: absolute;
-    top: 20px;
-    left: 20px;
-    border: none;
-    cursor: pointer;
-    background-color: #6e07f3;
-  }
-
-  .cross {
-    width: 40px;
-    height: 40px;
-  }
-
-  .btn-form {
-    margin: 0 auto;
-    height: 60px;
-    width: 200px;
-    border: 4px solid white;
-    border-radius: 30px;
-    background-color: #6e07f3;
-    color: white;
+    left: 510px;
     font-size: 2rem;
+    z-index: 2;
+  }
+  .cross {
+    width: 30px;
+    height: 30px;
+    margin-left: 20px;
+    margin-top: 10px;
+    cursor: pointer;
+  }
+  .titule-form {
+    font-size: 3rem;
+  }
+  .datos {
+    width: 90%;
+    margin-left: 35px;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  }
+  input {
+    font-size: 1.3rem;
+    padding-left: 10px;
+    width: 90%;
+    outline: none;
+    height: 3rem;
+    border: 1px solid white;
+    border-radius: 5px;
+  }
+  .message {
+    width: 90%;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    margin-left: 30px;
+  }
+  .error-input {
+    font-size: 1.4rem;
+    margin-top: 5px;
+  }
+  .btn-from {
+    width: 160px;
+    height: 60px;
+    background-color: #6e07f3;
+    border: 4px solid white;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1.2rem;
+    border-radius: 25px;
+    padding: 10px;
+    margin: 0 auto;
+  }
+  .btn-from:hover {
+    background-color: white;
+    border: 4px solid #6e07f3;
+    color: #6e07f3;
+  }
+  .mensaje-exito {
+    font-size: 1.8rem;
+    margin: 10px auto;
   }
 }
